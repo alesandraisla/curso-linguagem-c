@@ -22,6 +22,7 @@ int main (){
 	int primeiroNumero, segundoNumero;
 	
 	// esse sinal com os numeros % significa sobra da divisao
+	/*
 	
 	printf("Digite o primeiro numero");
 	scanf("%i", &primeiroNumero);
@@ -37,9 +38,34 @@ int main (){
 		}else {
 			printf("%i nao e´divisivel por %i.\n", primeiroNumero, segundoNumero);		}
 	}
-	
+	*/
 	
 	// Criar um programa que vai inverter a cifra que o usuario digitar
+	
+	int numero, cifra;
+	 printf("Digite um numero inteiro: \n");
+	 scanf("%i", &numero);
+	 
+	 if (numero >= 0){
+		do {
+			cifra = numero % 10;
+			printf("%i", cifra);  // % sobra
+			numero /= 10;			
+		}	while (numero != 0);
+		printf("\n"); 	
+	 } 
+	 else if (numero < 1) {
+		numero = numero * -1;  // vai passar o numero para positivo
+		printf("-");	
+	 	do {
+	 		cifra = numero % 10;
+	 		printf("%i", cifra);
+	 		numero /= 10;
+		 }while (numero != 0);
+		 printf("\n");
+	}
+	 
+	 
 	
 	
 	
